@@ -11,10 +11,9 @@ const SerialPort    = require('serialport');
 function Serial(port, options){
   var self = this;
   options = options || { 
-    baudRate: 9600,
-    autoOpen: false
+    baudRate: 9600
   };
-  this.device = new SerialPort(port, options);
+  this.device = new SerialPort.SerialPort(port, options,false);
   this.device.on('close', function() {
     self.emit('disconnect', self.device);
     self.device = null;

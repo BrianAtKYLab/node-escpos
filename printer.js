@@ -23,7 +23,7 @@ function Printer(adapter){
   EventEmitter.call(this);
   this.adapter = adapter;
   this.buffer = new Buffer();
-  this.encoding = 'GB18030';
+  this.encoding = 'CP950';
   this._model = null;
 };
 
